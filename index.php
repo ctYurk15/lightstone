@@ -10,6 +10,9 @@ use lightstone\app\router\Router as Router;
 use lightstone\app\router\URL as URL;
 use lightstone\app\router\Route as Route;
 use lightstone\app\controllers\Controller as Controller;
+use lightstone\app\Leaft as Leaft;
+
+Leaft::setTemplatePath(__DIR__.'/templates/');
 
 //initializing current url
 $url = new URL($_SERVER['REQUEST_URI']);

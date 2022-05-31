@@ -2,20 +2,18 @@
 
 namespace lightstone\app\controllers;
 
+use lightstone\app\Leaft;
+
 class Controller
 {
     public function home()
     {
-        echo 'home<hr>';
-    }
-
-    public function product($id)
-    {
-        echo 'Product '.$id.'<hr>';
+        $leaft = new Leaft();
+        echo $leaft->content('main');
     }
 
     public function not_found()
     {
-        echo '404<hr>';
+        echo '404';
     }
 }
