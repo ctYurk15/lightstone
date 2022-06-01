@@ -1,5 +1,7 @@
 <?php
 
+include_once 'routes.php';
+
 spl_autoload_register(function ($class_path) {
 
     //removing framework name
@@ -9,4 +11,4 @@ spl_autoload_register(function ($class_path) {
     include_once $class_path.'.php';
 });
 
-include_once 'routes.php';
+const ROOT_DIR = __DIR__;
