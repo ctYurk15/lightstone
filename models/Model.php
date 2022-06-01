@@ -24,7 +24,7 @@ class Model
         $records = [];
         $class_name = static::class;
 
-        if(static::$conn == null) static::init_conn();
+        //if(static::$conn == null) static::init_conn();
 
         $query = 'SELECT * FROM '.static::$table.'';
         $query .= ($where_clause == '') ? '' : 'WHERE '.$where_clause;
@@ -40,7 +40,7 @@ class Model
 
     public static function createFromarray($values)
     {
-        if(static::$conn == null) static::init_conn();
+        //if(static::$conn == null) static::init_conn();
         $record_values = $values;
 
         $columns = implode(', ', array_map(function($column){
@@ -76,7 +76,7 @@ class Model
             }
         }
 
-        if(static::$conn == null) static::init_conn();
+        //if(static::$conn == null) static::init_conn();
     }
 
     public function getId()

@@ -6,6 +6,7 @@ use lightstone\app\router\Router as Router;
 use lightstone\app\router\URL as URL;
 use lightstone\app\Leaft as Leaft;
 use lightstone\models\Model as Model;
+use lightstone\app\Database as Database;
 
 class Initializer
 {
