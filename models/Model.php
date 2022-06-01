@@ -14,17 +14,9 @@ class Model
     protected $values;
     protected $changed_values;
 
-
-
-    public static function hello()
+    public static function init_conn($host, $user, $pass, $dbname)
     {
-        echo 'hello!';
-    }
-
-    public static function init_conn()
-    {
-        $db_data = json_decode(file_get_contents(static::$dbdata_path), true);
-        static::$conn = new \mysqli($db_data['host'], $db_data['user'], $db_data['pass'], $db_data['dbname']);
+        static::$conn = new \mysqli($host, $user, $pass, $dbname);
     }
 
     public static function all($where_clause = '')
