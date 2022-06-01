@@ -9,6 +9,9 @@
     <title>Hello developer!</title>
 </head>
 <body>
-    Hello developer!
+    <div class="content">
+        <h3>Hello developer! Lightstone framework should work here!</h3>
+        <img src="resources/images/pngegg.png">
+    </div>
 </body>
 </html>
