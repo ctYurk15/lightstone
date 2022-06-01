@@ -22,7 +22,7 @@ class Leaft
             if(preg_match('/\$/i', $command))
             {
                 preg_match('#{@.*\$(.+)@}#s', $command, $variable);
-                $variable_name = preg_replace('/\'|"|/', '', $variable[1]);
+                $variable_name = preg_replace('/\'|"| /', '', $variable[1]);
                 $variable_value = $this->variables[$variable_name];
 
                 //arrays

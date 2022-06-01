@@ -9,6 +9,7 @@ class Controller
     public function home()
     {
         $leaft = new Leaft();
+        $leaft->set('RESOURCES_PATH', ROOT_DIR.'/resources/');
         echo $leaft->content('main');
     }
 
