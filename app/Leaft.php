@@ -14,7 +14,7 @@ class Leaft
     protected function parse($content)
     {
         $commands = [];
-        preg_match_all('/{@.*@}/i', $content, $commands);
+        preg_match_all('/{@(.*?)@}/s', $content, $commands);
 
         foreach ($commands[0] as $command)
         {
@@ -31,7 +31,7 @@ class Leaft
                     preg_match('/\[.*\]/i', $variable_name, $key);
                     $key = preg_replace('/\[|\]/', '', $key);
                     $variable_value = $this->variables[$variable_name][$key];
-                    $short_variable_name = substr($variable_name, 0, strlen($variable_name)-strpos($variable_name, '[')+1);
+                    $short_variable_name = substr($variable_name, 0, strpos($variable_name, '['));
                     $variable_value = $this->variables[$short_variable_name][$key[0]];
                     //echo $short_variable_name;
                 }
