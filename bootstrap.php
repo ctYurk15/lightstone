@@ -1,6 +1,10 @@
 <?php
 
 include_once 'routes.php';
+if(file_exists('vendor/autoload.php'))
+{
+    include_once 'vendor/autoload.php';
+}
 
 spl_autoload_register(function ($class_path) {
 
